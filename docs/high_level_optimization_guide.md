@@ -19,7 +19,8 @@ This is black-box search over starter planner parameters. It optimizes
 
 - Tune `speed_mps`, `k_heading`, `k_lateral`, and command scaling inside the
   starter planner.
-- Replace `track_bonus/planner.py` with an MLP or RL controller.
+- Replace `track_bonus/planner.py` with an MLP or RL controller while keeping
+  the same load/command entry point.
 - Train the low-level policy to track nonzero `vy` and `yaw_rate`.
 - Use staged evaluation: straight, turn entry, turn middle, turn exit, full lap.
 

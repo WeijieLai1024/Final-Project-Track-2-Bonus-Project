@@ -1,6 +1,6 @@
 {
   "team_name": "example_team",
-  "track2_option": "tournament",
+  "track2_option": "leaderboard",
   "checkpoint_dir": "best_checkpoint",
   "planner_config": "planner_config.json",
   "planner_code": "track_bonus/planner.py",

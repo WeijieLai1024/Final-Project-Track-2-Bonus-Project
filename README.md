@@ -3,13 +3,13 @@
 Starter code for the Track 2 final-project option: make a Unitree Go2 run as
 far as possible around a 200 m oval track in MuJoCo.
 
-This repo is intentionally only a starter. It does not include a trained
-solution checkpoint, successful planner, teacher rollouts, or solution videos.
+This repo is intentionally only a starter. It starts from a weak baseline and
+leaves policy and planner design to you.
 
 ## Choices
 
 - Proposal-based final project.
-- Go2 oval-track tournament.
+- Go2 oval-track leaderboard route.
 - Both, for bonus.
 
 Read `docs/assignment_requirements.md`.
@@ -46,6 +46,9 @@ python run_track_bonus.py \
   --output-dir artifacts/track_eval
 ```
 
+This evaluates one submission at a time. Course staff will compare submitted
+results for ranking.
+
 ## Explore
 
 - Improve low-level turning and command tracking in `go2_pg_env/joystick.py`.
@@ -56,11 +59,12 @@ More: `docs/high_level_optimization_guide.md`
 
 ## Submission
 
-Typical tournament submission:
+Typical leaderboard submission:
 
 ```text
 best_checkpoint/
-planner_config.json and changed planner code
+planner_config.json
+changed planner code, if any
 submission.json
 track_eval/results.json
 optional track_eval/race.mp4

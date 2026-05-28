@@ -1,7 +1,7 @@
 # Controller Interface
 
-High-level controllers must use this interface so different submissions can be
-evaluated together.
+High-level controllers must use this interface so submissions share the same
+contract.
 
 ```text
 5D track observation -> [vx, vy, yaw_rate] -> Go2 low-level policy
@@ -29,6 +29,10 @@ Defined in `track_bonus/controller_interface.py`.
 
 Shape must be `(3,)`. Values must be finite. The evaluator does not clip or
 rescale commands.
+
+The default evaluator loads `StarterTrackPlanner.load(planner_config)` and then
+calls `planner.command(qpos, t)`. If you replace the controller implementation,
+keep that entry point or include the modified evaluator code.
 
 ## Checkpoint
 
